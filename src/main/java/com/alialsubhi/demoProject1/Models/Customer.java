@@ -1,5 +1,6 @@
 package com.alialsubhi.demoProject1.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,6 +11,8 @@ import javax.persistence.*;
 @Data
 @Entity
 @Table(name = "customers")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+
 public class Customer {
 
     @Id
